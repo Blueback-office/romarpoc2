@@ -1,1 +1,1 @@
-# romarpoc2
+# Odoo modules for Romar POC
