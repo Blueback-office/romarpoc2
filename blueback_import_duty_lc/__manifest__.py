@@ -6,16 +6,20 @@
     "sequence": 1,
     "summary": """Blueback Import Duty LC""",
     "license": "LGPL-3",
+    
     # Author
     "author": "Serpent Consulting Services Pvt. Ltd.",
-    "website": "http://www.serpentcs.com",
+    "website": "https://www.serpentcs.com",
     "maintainer": "Serpent Consulting Services Pvt. Ltd.",
+    
     # Dependencies
     "depends": ["stock_landed_costs"],
+    
     # Views
     "data": [
-        "views/product_template_views.xml",
+       'views/product_template_views.xml',
     ],
+    
     # Technical
     "installable": True,
 }
