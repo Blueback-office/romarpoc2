@@ -31,7 +31,7 @@ class StockLandedCost(models.Model):
             stock_move_obj = self.env['stock.move'].search([('id', '=', rec.get('move_id'))])
             rec['excise_percentage'] = stock_move_obj.product_id.excise_percentage
             rec['duty_percentage'] = stock_move_obj.product_id.duty_percentage
-            rec['po_cost'] = stock_move_obj.stock_valuation_layer_ids.mapped('value')[0]
+            rec['po_cost'] = stock_move_obj.stock_valuation_layer_ids.mapped('value')[0] or 0
         return result
 
     def compute_landed_cost(self):
