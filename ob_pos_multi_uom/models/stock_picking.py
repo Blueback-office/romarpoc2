@@ -12,7 +12,7 @@ class StockPicking(models.Model):
     def _prepare_stock_move_vals(self, first_line, order_lines):
         return {
             'name': first_line.name,
-            'product_uom': first_line.uom_id.id,
+            'product_uom': first_line.uom_id.id or first_line.product_id.uom_id.id,
             'picking_id': self.id,
             'picking_type_id': self.picking_type_id.id,
             'product_id': first_line.product_id.id,
